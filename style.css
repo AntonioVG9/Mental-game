@@ -55,8 +55,17 @@ html {
   animation: badgePulse 2.5s infinite;
 }
 .badge2 {
-  background: var(--dorado-warriors);
-  color: var(--azul-warriors);
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--azul-warriors);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: badgePulse 2.5s infinite;
 }
 
 @keyframes badgePulse {
@@ -189,7 +198,14 @@ h2 {
   color: white;
   text-align: center;
   padding: 60px 20px;
+  border-color: red 5px solid ;
 }
+
+
+.contact_title {
+  color: white;
+}
+
 #contact a {
   display: inline-block;
   margin-top: 20px;
