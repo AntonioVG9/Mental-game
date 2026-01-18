@@ -18,7 +18,9 @@
     <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer> </script>
   </head>
+  
   <body>
     <header>
       <div id="banner">
@@ -27,18 +29,23 @@
       </div>
 
       <nav id="main_nav">
+        <button id="menuToggle" aria-label="Abrir menú">
+          ☰
+        </button>
+        <div class="nav-links" id="navLinks">
         <a href="#description">¿Qué es Mental Game?</a>
         <a href="#about_me">Sobre mí</a>
         <a href="#services">Servicios</a>
         <a href="#prices">Precios</a>
         <a href="#contact">Contacto</a>
+        </div>
       </nav>
     </header>
 
     <section id="description">
       <h2>¿Qué es Mental Game?</h2>
       <ul class="subsection">
-        <il class="card">
+        <li class="card">
           <h3>¿Qué es?</h3>
           <p>
             Se trata de un espacio dedicado a la psicología del deporte, en la
@@ -46,7 +53,7 @@
             deportivo disfrutando cada etapa del proceso. Orientado a
             deportistas individuales, entrenadores y equipos.
           </p>
-        </il>
+        </li>
         <li class="card">
           <h3>Método de trabajo</h3>
           <p>
