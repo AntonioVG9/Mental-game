@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  list-style: none;
 }
 body {
   background: #f6f8fb;
@@ -84,6 +85,7 @@ html {
 }
 
 #banner {
+  position: relative;
   background-image: url(./assets/banner_placeholder.jpg); /*linear-gradient(120deg, var(--azul-warriors), #0f2e63);*/
    background-position: center;
   background-size: cover;
@@ -93,7 +95,18 @@ html {
   color: white;
   padding: 60px 20px;
   text-align: center;
-  border: red 2px solid;
+  
+}
+
+#banner::before{
+   content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00000064;
+  z-index: 0;
 }
 
 #banner h1 {
@@ -108,16 +121,7 @@ html {
   
 }
 
-#banner::before{
-   content: "";
-  position: absolute;
-  top: 0;
-  bottom: 67vh;
-  left: 0;
-  right: 0;
-  background-color: #00000064;
-  z-index: 0;
-}
+
 
 
 header h1 {
