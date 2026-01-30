@@ -1,3 +1,6 @@
+/* ======================
+   RESET Y BASE
+====================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,6 +8,11 @@
   font-family: Arial, sans-serif;
   list-style: none;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #f6f8fb;
   color: #222;
@@ -16,101 +24,97 @@ body {
   --dorado-warriors: #ffc72c;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-
-
+/* ======================
+   BANNER
+====================== */
 #banner {
   position: relative;
-  background-image: url(./assets/banner_placeholder.jpg); /*linear-gradient(120deg, var(--azul-warriors), #0f2e63);*/
-   background-position: center;
+  background-image: url(./assets/banner_placeholder.jpg);
+  background-position: center;
   background-size: cover;
-  width: auto;
   min-height: 30vh;
-  object-fit: cover;
   color: white;
   padding: 60px 20px;
   text-align: center;
-  
 }
 
-#banner::before{
-   content: "";
+#banner::before {
+  content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #00000064;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
 
-#banner h1 {
-  z-index: 1;
-  position:relative;
-  
-}
-
+#banner h1,
 #banner p {
+  position: relative;
   z-index: 1;
-  position:relative;
-  
 }
 
-
-/* HEADER CONFIG */
-
+/* ======================
+   HEADER
+====================== */
 header h1 {
   font-size: 2.8rem;
   margin-bottom: 10px;
 }
+
 header p {
   font-size: 1.2rem;
   color: var(--dorado-warriors);
 }
 
-
-
- /* NAVEGADOR PRINCIPAL */
+/* ======================
+   NAV
+====================== */
 #main_nav {
   background: var(--azul-warriors);
-  padding: 5px;
-  
+  padding: 2px 4px;
+  line-height: 1.2;
   text-align: center;
-  
 }
+
+/* contenedor links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* links */
 #main_nav a {
   color: white;
-  margin: 80px 80px;
   text-decoration: none;
   font-weight: bold;
+  padding: 2px 4px;
+  line-height: 1.2;
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  margin: clamp(12px, 2.5vw, 32px);
 }
+
 #main_nav a:hover {
   color: var(--dorado-warriors);
 }
 
+/* botón hamburguesa (desktop oculto) */
 #menuToggle {
+  display: none;
   background: none;
   border: none;
   font-size: 2rem;
   color: white;
   cursor: pointer;
-  display:none; /* luego se activa en móvil */
+  font-size: 60px;
 }
 
-
-
-
+/* ======================
+   SECCIONES
+====================== */
 section {
   padding: 70px 20px;
   max-width: 1100px;
   margin: auto;
-}
-
-#description{
-z-index: 1;
 }
 
 h2 {
@@ -119,99 +123,13 @@ h2 {
   color: var(--azul-warriors);
 }
 
-
-
-
-
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: #fff;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-  z-index: 100;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.whatsapp-float:hover {
-  background-color: #20b858;
-}
-
-.badge {
-  position: absolute;
-  top: -12px;
-  right: 20px;
-  background: var(--azul-warriors);
-  color: white;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  animation: badgePulse 2.5s infinite;
-}
-.badge2 {
-  position: absolute;
-  top: -12px;
-  right: 20px;
-  background: var(--azul-warriors);
-  color: white;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  animation: badgePulse 2.5s infinite;
-}
-
-@keyframes badgePulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  50% {
-    transform: scale(1.06);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-}
-
-
-
-
+/* ======================
+   GRIDS
+====================== */
 .subsection {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
-}
-
-.card {
-  position: relative;
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-  border-top: 5px solid var(--dorado-warriors);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
-}
-.card.highlight {
-  border-top: 6px solid var(--azul-warriors);
-  background: linear-gradient(180deg, #fff, #fff6d6);
 }
 
 .subsection2 {
@@ -221,28 +139,59 @@ h2 {
   align-items: center;
 }
 
+#foto_perfil {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ======================
+   CARDS
+====================== */
+.about_me_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about_me_card h3 {
+  margin-top: 12px;
+  font-size: 1.1rem;
+}
+
+.card {
+  position: relative;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid var(--dorado-warriors);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ======================
+   CONTACTO
+====================== */
 #contact {
   background: linear-gradient(120deg, var(--azul-warriors), #0f2e63);
   color: white;
   text-align: center;
   padding: 60px 20px;
-  border-color: red 5px solid ;
 }
-
 
 .contact_title {
   color: white;
-}
-
-#contact a {
-  display: inline-block;
-  margin-top: 20px;
-  background: var(--dorado-warriors);
-  color: var(--azul-warriors);
-  padding: 12px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 form {
@@ -251,12 +200,14 @@ form {
   display: grid;
   gap: 15px;
 }
+
 input,
 textarea {
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
 }
+
 button {
   padding: 12px;
   background: var(--azul-warriors);
@@ -266,6 +217,9 @@ button {
   cursor: pointer;
 }
 
+/* ======================
+   FOOTER
+====================== */
 footer {
   background: #0f2e63;
   color: white;
@@ -274,11 +228,91 @@ footer {
   font-size: 0.9rem;
 }
 
+/* ======================
+   WHATSAPP
+====================== */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  text-decoration: none;
+}
+
+/* ======================
+   RESPONSIVE MÓVIL
+====================== */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2.1rem;
+  /* NAV */
+  #menuToggle {
+    display: block;
+    font-size: 1.6rem;
+    margin: 0 0 6px 0; /* quita centrado */
   }
-  .grid {
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 10px;
+    width: 100%;
+    align-items: flex-start; /* 👈 clave */
+    text-align: left;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  #main_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 👈 clave */
+    padding: 8px 12px;
+  }
+
+  #main_nav a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    margin: 0;
+    line-height: 1.3;
+    width: 100%;
+    text-align: left;
+    padding: 6px 12px;
+  }
+
+  #main_nav a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    color: white;
+  }
+
+  /* GENERAL */
+  section {
+    padding: 50px 15px;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+  }
+
+  .subsection,
+  .subsection2 {
     grid-template-columns: 1fr;
+  }
+
+  footer {
+    font-size: 0.85rem;
   }
 }
