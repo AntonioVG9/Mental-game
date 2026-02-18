@@ -29,7 +29,7 @@ body {
 ====================== */
 #banner {
   position: relative;
-  background-image: url(./assets/banner_placeholder.jpg);
+  background-image: url(./assets/Banner_real.png);
   background-position: center;
   background-size: cover;
   min-height: 30vh;
@@ -42,13 +42,14 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.17);
   z-index: 0;
 }
 
 #banner h1,
 #banner p {
   position: relative;
+  visibility: hidden;
   z-index: 1;
 }
 
