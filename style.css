@@ -36,6 +36,7 @@ body {
   color: white;
   padding: 60px 20px;
   text-align: center;
+  background-repeat: no-repeat;
 }
 
 #banner::before {
@@ -329,6 +330,8 @@ footer {
     padding: 40px 15px;
     background-size: contain;  
     background-position: top center;
+    background-repeat: no-repeat;
+    
   }
 
 
