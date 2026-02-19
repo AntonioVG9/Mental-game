@@ -30,6 +30,8 @@ body {
 #banner {
   position: relative;
   background-image: url(./assets/Banner_real.png);
+  width: 100%;
+  aspect-ratio: 35296 / 5705;
   background-position: center;
   background-size: contain;
   color: white;
