@@ -327,8 +327,9 @@ footer {
 @media (max-width: 768px) {
  #banner {
     min-height: auto;
-    padding: 40px 15px;
-    background-size: contain;  
+    height: auto  ;
+    padding: 0px;
+    background-size: 100% auto;  
     background-position: top center;
     background-repeat: no-repeat;
     
