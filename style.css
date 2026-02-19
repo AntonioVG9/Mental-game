@@ -31,7 +31,7 @@ body {
   position: relative;
   background-image: url(./assets/Banner_real.png);
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   color: white;
   padding: 60px 20px;
   text-align: center;
