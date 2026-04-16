@@ -404,3 +404,57 @@ footer {
     font-size: 0.85rem;
   }
 }
+
+/* ======================
+   REDES SOCIALES NAV
+====================== */
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: clamp(12px, 2.5vw, 32px);
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* las pone en blanco para que encajen con el nav azul */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+  opacity: 0.75;
+  transform: scale(1.1);
+}
+
+/* ======================
+   REDES SOCIALES FOOTER
+====================== */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 15px 0;
+}
+
+.social-icon-footer {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* blanco para el fondo oscuro del footer */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon-footer:hover {
+  opacity: 0.75;
+  transform: scale(1.1);
+}
+
+/* Responsive móvil - iconos nav */
+@media (max-width: 768px) {
+  .nav-social {
+    margin: 6px 12px;
+    justify-content: flex-start;
+  }
+}
