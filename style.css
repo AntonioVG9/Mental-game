@@ -363,11 +363,22 @@ footer {
   }
 
   #main_nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* 👈 clave */
-    padding: 8px 12px;
-  }
+  display: flex;
+  flex-direction: column;
+  background: var(--azul-warriors);
+  padding: 2px 4px;
+  line-height: 1.2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* desktop: todo centrado */
+}
+.nav-left {
+  display: none; /* oculto en desktop */
+}
+
+
+  
 
   #main_nav a {
     font-size: 0.9rem;
@@ -384,6 +395,45 @@ footer {
     border-radius: 6px;
     color: white;
   }
+
+
+
+  @media (max-width: 768px) {
+  #main_nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; /* botón a la izquierda, iconos a la derecha */
+    align-items: center;
+    padding: 8px 12px;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+
+  #menuToggle {
+    display: block;
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%; /* ocupa toda la fila cuando se abre */
+    order: 3; /* aparece debajo del botón y los iconos */
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-social {
+    margin: 0;
+    order: 2; /* iconos a la derecha del botón hamburguesa */
+  }
+}
 
   /* GENERAL */
   section {
