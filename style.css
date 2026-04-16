@@ -416,8 +416,8 @@ footer {
 }
 
 .social-icon {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   filter: brightness(0) invert(1); /* las pone en blanco para que encajen con el nav azul */
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -439,8 +439,8 @@ footer {
 }
 
 .social-icon-footer {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   filter: brightness(0) invert(1); /* blanco para el fondo oscuro del footer */
   transition: opacity 0.2s ease, transform 0.2s ease;
