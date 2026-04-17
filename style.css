@@ -1,6 +1,39 @@
 /* ======================
    RESET Y BASE
 ====================== */
+:root{
+ --azul-oscuro:   #1a2b3c;
+  --blanco:        #ffffff;
+  --dorado:        #d4a853;
+  --naranja:       #c4693a;
+  --gris:          #6b6b6b;
+ 
+  --fuente-titulo: 'Playfair Display', Georgia, serif;
+  --fuente-texto:  'Crimson Pro', 'Times New Roman', serif;
+ 
+  --letra-xs:  0.75rem;
+  --letra-sm:  0.875rem;
+  --letra-md:  1.125rem;
+  --letra-lg:  1.25rem;
+  --letra-xl:  1.5rem;
+  --letra-3xl: 2.75rem;
+ 
+  --espacio-xs:  0.5rem;
+  --espacio-sm:  1rem;
+  --espacio-md:  1.5rem;
+  --espacio-lg:  2.5rem;
+  --espacio-xl:  4rem;
+  --espacio-2xl: 6rem;
+ 
+  --redondeo-md: 8px;
+  --redondeo-lg: 16px;
+ 
+  --sombra-lg: 0 16px 48px rgba(26, 43, 60, 0.20);
+ 
+  --velocidad: 0.25s ease;
+
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -186,6 +219,8 @@ h2 {
   align-items: center;
 }
 
+
+
 .about_me_card h3 {
   margin-top: 12px;
   font-size: 1.1rem;
@@ -194,7 +229,7 @@ h2 {
 .card {
   position: relative;
   background: white;
-  padding: 25px;
+  padding: 8px;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
   border-top: 5px solid var(--dorado-warriors);
@@ -203,21 +238,30 @@ h2 {
     box-shadow 0.3s ease;
 }
 
+
+
+.card a{
+  text-decoration: none;
+  color: #000000;
+}
+
 .card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
 }
 
 .price_tag {
-  font-size: 32px;
-  margin-top: 40px;
-  margin-bottom: 5px;
+  font-size: 22px;
+  margin: 12px;
+  margin-left: 6px;
+  padding-bottom: 10px;
 }
 
 .price_tag2 {
-  font-size: 32px;
-  margin-top: 20px;
-  margin-bottom: 5px;
+ font-size: 28px;
+  margin: 12px;
+  margin-left: 6px;
+  padding-bottom: 10px;
 }
 
 /* ======================
@@ -453,5 +497,150 @@ footer {
 
   footer {
     font-size: 0.85rem;
+  }
+}
+
+
+
+/*CAMBIOS A LA SECCIÓN ABOUT_ME*/
+
+.seccion__cabecera {
+  text-align: center;
+  margin-bottom: var(--espacio-lg);
+}
+ 
+.seccion__etiqueta {
+  display: inline-block;
+  font-size: var(--letra-xs);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--dorado-warriors);
+  margin-bottom: var(--espacio-xs);
+}
+ 
+.seccion__titulo {
+  font-family: var(--fuente-titulo);
+  font-size: var(--letra-3xl);
+  color: var(--azul-oscuro);
+  line-height: 1.2;
+}
+ 
+/* Versión clara para fondos oscuros */
+.seccion__cabecera--claro .seccion__titulo {
+  color: var(--blanco);
+}
+ 
+ 
+/* ---- Sección about_me ---- */
+ 
+.about_me {
+  background-color: var(--azul-warriors);
+  padding: var(--espacio-2xl) var(--espacio-xl);
+  position: relative;  /* necesario para posicionar la imagen de fondo */
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+}
+ 
+/* Contenedor de la imagen de fondo decorativa */
+.about_me__fondo_img {
+  position: absolute; /* se coloca detrás de todo */
+  inset: 0;           /* ocupa los 4 lados de la sección */
+  pointer-events: none;
+  z-index: 0;
+}
+ 
+/* La imagen de fondo: muy transparente para que sea solo ambiental */
+/* Sube opacity si quieres que se vea más, bájala si quieres menos */
+.about_me__foto_fondo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.08;
+  filter: saturate(0.5);
+}
+ 
+/* Contenido por encima de la imagen de fondo */
+.about_me__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+ 
+ 
+/* ---- Grid: foto a la izquierda, texto a la derecha ---- */
+/* CSS Grid con 2 columnas: la foto ocupa 1 parte, el texto 2 partes */
+ 
+.about_me__grid {
+  display: grid; /* CSS GRID */
+  grid-template-columns: 1fr 2fr; /* columna foto más estrecha, texto más ancho */
+  gap: var(--espacio-lg);
+  align-items: center; /* centra verticalmente foto y texto */
+}
+ 
+/* Cada columna del grid */
+.about_me__unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+/* Foto de perfil */
+.about_me__foto_perfil {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;       /* siempre cuadrada */
+  object-fit: cover;
+  object-position: top;       /* recorta desde arriba para que salga la cara */
+  border-radius: var(--redondeo-lg);
+  border: 3px solid rgba(212, 168, 83, 0.35);
+  box-shadow: var(--sombra-lg);
+  margin: 0 auto;             /* centra la foto dentro de su columna */
+}
+ 
+/* Nombre */
+.about_me__nombre {
+  font-family: var(--fuente-titulo);
+  font-size: var(--letra-xl);
+  color: var(--dorado-warriors);
+  margin-bottom: var(--espacio-sm);
+  line-height: 1.2;
+}
+ 
+/* Texto de presentación */
+.about_me__texto {
+  font-family: var(--fuente-texto);
+  font-size: var(--letra-md);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.75;
+}
+ 
+ 
+/* ---- Responsive: móvil ---- */
+/* En pantallas pequeñas la foto va arriba y el texto abajo */
+ 
+@media (max-width: 768px) {
+ 
+  :root {
+    --letra-3xl:   2rem;
+    --espacio-xl:  2rem;
+    --espacio-2xl: 3.5rem;
+  }
+ 
+  .about_me {
+    padding: var(--espacio-xl) var(--espacio-md);
+  }
+ 
+  /* Una sola columna en móvil */
+  .about_me__grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  /* La foto se reduce un poco en móvil */
+  .about_me__foto_perfil {
+    max-width: 200px;
   }
 }
