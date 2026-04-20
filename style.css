@@ -7,6 +7,8 @@
   --dorado:        #d4a853;
   --naranja:       #c4693a;
   --gris:          #6b6b6b;
+  --azul-warriors: #1d428a;
+  --dorado-warriors: #ffc72c;
  
   --fuente-titulo: 'Playfair Display', Georgia, serif;
   --fuente-texto:  'Crimson Pro', 'Times New Roman', serif;
@@ -52,17 +54,13 @@ body {
   line-height: 1.6;
 }
 
-:root {
-  --azul-warriors: #1d428a;
-  --dorado-warriors: #ffc72c;
-}
 
 /* ======================
    BANNER
 ====================== */
 #banner {
   position: relative;
-  background-image: url(./assets/Banner_real.png);
+  background-image: url(./assets/Banner_real2.png);
   width: 100%;
   aspect-ratio: 35296 / 5705;
   background-position: center;
