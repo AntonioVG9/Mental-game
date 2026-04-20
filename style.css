@@ -641,3 +641,111 @@ footer {
     max-width: 200px;
   }
 }
+
+
+
+
+/* ---- SECCIÓN DE CURSOS ---- */
+
+.cursos {
+  background-color: var(--beige);
+  padding: var(--espacio-2xl) var(--espacio-xl);
+}
+
+/* Grid de tarjetas — se ajusta automáticamente al ancho disponible */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--espacio-sm);
+  padding: var(--espacio-sm);
+  margin-bottom: var(--espacio-lg);
+}
+
+/* Tarjeta individual */
+.curso {
+  border: 2px solid var(--beige-oscuro);
+  box-shadow: var(--sombra-sm);
+  background-color: var(--blanco);
+  border-radius: var(--redondeo-md);
+  text-align: center;
+  overflow: hidden;
+  transition: box-shadow var(--velocidad), transform var(--velocidad);
+}
+
+.curso:hover {
+  box-shadow: var(--sombra-md);
+  transform: translateY(-3px);
+}
+
+.curso h3 {
+  padding: 0.4em 0.8em;
+  min-height: 4em;
+  font-family: var(--fuente-texto);
+  font-size: var(--letra-md);
+  color: var(--negro-suave);
+  line-height: 1.4;
+}
+
+/* El enlace no tiene subrayado */
+.curso a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Imagen de portada del curso */
+.curso img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estrellas de valoración */
+.estrellas img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Fila con estrellas y número de alumnos */
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5em 0;
+  padding: 0.5em 1.5em;
+}
+
+/* Precio */
+.precio {
+  font-size: var(--letra-lg);
+  padding: 0.5em 1em;
+  font-family: var(--fuente-titulo);
+  color: var(--azul-oscuro);
+}
+
+/* Precio original tachado en rojo */
+.precio-tachado {
+  text-decoration: line-through;
+  color: var(--naranja);
+  margin-right: 0.5em;
+  font-size: var(--letra-md);
+}
+
+/* Aviso legal debajo de las tarjetas */
+.aviso-profesional {
+  font-size: var(--letra-xs);
+  color: var(--gris);
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: var(--espacio-md) 0 0;
+  border-top: 1px solid var(--beige-oscuro);
+}
+
+.aviso-profesional a {
+  color: var(--naranja);
+  text-decoration: none;
+}
+
+.aviso-profesional a:hover {
+  text-decoration: underline;
+}
