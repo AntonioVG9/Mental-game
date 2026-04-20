@@ -590,13 +590,12 @@ footer {
 .about_me__foto_perfil {
   width: 100%;
   max-width: 280px;
-  aspect-ratio: 1 / 1;       /* siempre cuadrada */
-  object-fit: cover;
-  object-position: top;       /* recorta desde arriba para que salga la cara */
+  height: auto;              
+  object-fit: contain;       
   border-radius: var(--redondeo-lg);
   border: 3px solid rgba(212, 168, 83, 0.35);
   box-shadow: var(--sombra-lg);
-  margin: 0 auto;             /* centra la foto dentro de su columna */
+  margin: 0 auto;            
 }
  
 /* Nombre */
