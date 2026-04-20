@@ -378,6 +378,13 @@ footer {
   transform: scale(1.1);
 }
 
+
+#aviso_legal{
+  text-decoration: none;
+  color: #f6f8fb;
+  
+}
+
 /* ======================
    WHATSAPP
 ====================== */
